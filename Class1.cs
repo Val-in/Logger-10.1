@@ -35,7 +35,7 @@ namespace Task2
             _logger.Event("Worker 2 stopped");
         }
     }
-
+    
     public class Worker3 : IWorker
     {
         private readonly ILogger _logger;
