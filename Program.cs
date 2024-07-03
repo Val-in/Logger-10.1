@@ -1,37 +1,9 @@
-﻿using System;
-using System.Threading;
-using static Task2.Program;
+﻿using Task._2.Interfaces;
+using Task._2.Workers;
+using Task._2;
 
 namespace Task2
 {
-    public interface ILogger
-    {
-        void Event(string message);
-        void Error(string message);
-    }
-
-    public class Logger : ILogger
-    {
-        public void Event(string message)
-        {
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.WriteLine(message);
-            Console.ResetColor();
-        }
-
-        public void Error(string message)
-        {
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.WriteLine(message);
-            Console.ResetColor();
-        }
-    }
-
-    public interface IWorker
-    {
-        void Work();
-    }
-
     class Program
     {
         static void Main(string[] args)
